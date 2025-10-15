@@ -1,0 +1,510 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Index and Common CSS */
+
+.headerContainer {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #00167d;
+}
+
+.navContainer {
+    display: block;
+    width: 100%;
+    background-color: #00167d;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 100px;
+    display: block;
+}
+
+.flexContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flexContent {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+/* Jobs Page CSS */
+
+.careersGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+}
+
+.careerItem {
+    text-align: center;
+    padding: 15px;
+}
+
+.careerItem:nth-child(4) {
+    grid-column: 1;
+}
+
+.careerItem:nth-child(5) {
+    grid-column: 2;
+}
+
+.careerItem img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.careerItem img:hover {
+    transform: scale(1.05);
+}
+
+.careerItem a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.careerItem a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+aside {
+	width: 25%;
+	float: right;
+	border: 2px solid #333;
+	margin: 15px;
+	padding: 10px;
+}
+
+/* Apply Page CSS */
+
+.formContainer {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    margin: 20px auto;
+}
+
+h1 {
+    color: #00167d;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 28px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2, h3{
+    color: #00167d;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #00167d;
+    border-radius: 2px;
+}
+
+.formGroup {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00167d;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.radioGroup {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.radioOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radioOption input[type="radio"] {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    accent-color: #00167d;
+}
+
+.checkboxGroup {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.checkboxGroup input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    accent-color: #00167d;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.formRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formRow .form-group {
+    flex: 1;
+}
+
+.submitBtn {
+    background: #00167d;
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.submitBtn:active {
+    transform: translateY(0);
+}
+
+.required::after {
+    content: " *";
+    color: #e74c3c;
+}
+
+.formNote {
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Footer Css */
+
+footer {
+    background-color: #00167d;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 30px 0;
+    clear: both;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #3498db;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* about page */
+
+#memberList {
+    list-style: none;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00167d;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+thead {
+    background: #00167d;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e1e1e1;
+    color: #555;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+.tableContainer {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 768px) {
+    .careersGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .careerItem:nth-child(5) {
+        grid-column: 2;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    caption {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .careersGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .careerItem:nth-child(5) {
+        grid-column: 1;
+    }
+}
+        
+@media (max-width: 600px) {
+    .formRow {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .formContainer {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1440px) {
+    aside {
+        margin: 150px;
+    }
+
+    nav a {
+        padding: 10px 75px;
+    }
+
+    nav a {
+        padding: 10px 75px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .headerContainer,
+    .navContainer {
+        padding: 10px 0;
+    }
+    
+    nav ul {
+        padding: 0;
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    nav a {
+        padding: 12px 20px;
+        margin: 2px 0;
+    }
+    
+    .flexContainer {
+        margin: 10px 5%;
+        flex-direction: column;
+    }
+    
+    .flexContent {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    aside {
+        width: 90%;
+        float: none;
+        margin: 20px auto;
+    }
+    
+    .careersGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .careerItem {
+        padding: 10px;
+    }
+    
+    .careerItem:nth-child(4),
+    .careerItem:nth-child(5) {
+        grid-column: 1;
+    }
+    
+    .formContainer {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .formRow {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .radioGroup {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    table {
+        font-size: 0.8em;
+    }
+    
+    th, td {
+        padding: 6px 8px;
+    }
+    
+    footer {
+        padding: 20px 0;
+    }
+    
+    footer a {
+        display: block;
+        margin: 5px 0;
+        padding: 10px;
+    }
+}
