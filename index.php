@@ -24,20 +24,9 @@
 
 <body>
     <!-- Company Header -->
-    <header class="headerContainer">
-        <img src="images/mainlogo_nobg.png" alt="Company Logo" width="300">
-        <!-- Navigation -->
-        <nav class="navContainer">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply Now</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php
+    include 'Inc_Files/header.inc';
+    ?>
 
 
     <main class="flexContainer">
@@ -77,14 +66,9 @@
                     <img src="images/side-img.jpg" alt="Representative image of the website theme" class="sideImage">
     </main>
 
-    <footer>
-        <p>
-            <a href="https://kashfiarahman.atlassian.net/jira/software/projects/ST/issues/?jql=project+%3D+%22ST%22+ORDER+BY+created+DESC&selectedIssue=ST-1&atlOrigin=eyJpIjoiZTgwN2M4NTBhN2U2NDU3ZThhZjllYjhlMjU5YjVjM2UiLCJwIjoiaiJ9"
-                target="_blank">Jira Board</a> |
-            <a href="https://github.com/105354223/SiteSquadAssign1.git" target="_blank">GitHub Repository</a> |
-            <a href="mailto:info@sitesquad.gov">Email Us</a>
-        </p>
-    </footer>
+    <?php
+    include 'Inc_Files/footer.inc';
+    ?>
 
 </body>
 

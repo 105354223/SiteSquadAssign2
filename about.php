@@ -12,7 +12,7 @@
 
 <body>
     <?php
-    include 'header.inc';
+    include 'Inc_Files/header.inc';
     ?>
 
     <main class="content">
@@ -100,13 +100,9 @@
         </figure>
     </main>
 
-    <footer>
-        <p>
-            <a href="https://github.com/your-repo" target="_blank">GitHub Repository</a> |
-            <a href="https://jira.your-reposs" target="_blank">Jira Board</a> |
-            <a href="mailto:info@companyname.com">info@companyname.com</a>
-        </p>
-    </footer>
+    <?php
+    include 'Inc_Files/footer.inc';
+    ?>
 
 </body>
 

@@ -12,20 +12,9 @@
 
 <body>
     <!-- Company Header -->
-    <header class="headerContainer">
-        <img src="images/mainlogo_nobg.png" alt="Company Logo" width="300">
-        <!-- Navigation -->
-        <nav class="navContainer">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply Now</a></li>
- 				<li><a href="about.html">About</a></li> 
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">FAQ</a></li>              
-            </ul>
-        </nav>
-    </header>
+    <?php
+    include 'Inc_Files/header.inc';
+    ?>
 
     <div class="formContainer">
         <h1>Job Application Form</h1>
@@ -143,13 +132,9 @@
             <p class="formNote">Fields marked with * are required</p>
         </form>
     </div>
-    <footer>
-        <p>
-            <a href="https://github.com/your-repo" target="_blank">GitHub Repository</a> |
-            <a href="https://jira.your-reposs" target="_blank">Jira Board</a> |
-            <a href="mailto:info@companyname.com">info@companyname.com</a>
-        </p>
-    </footer>
+    <?php
+    include 'Inc_Files/footer.inc';
+    ?>
 </body>
 
 </html>
