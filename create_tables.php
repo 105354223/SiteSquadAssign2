@@ -15,8 +15,15 @@ $createEoiTable = "CREATE TABLE IF NOT EXISTS eoi (
     email VARCHAR(100) NOT NULL,
     phone VARCHAR(20) NOT NULL,
     skills JSON,
-    other_skills TEXT
-    status ENUM('New', 'Current', 'Final') DEFAULT 'New'
-     application_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    )";
+    other_skills TEXT,
+    status ENUM('New', 'Current', 'Final') DEFAULT 'New',
+
+    application_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+    if (mysqli_query($conn, $createEoiTable)) {
+    echo "EOI table created successfully";
+} else {
+    echo "Error creating EOI table: " . mysqli_error($conn);
+}
+
 ?>  
