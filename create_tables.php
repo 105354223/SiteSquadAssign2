@@ -1,12 +1,19 @@
 <?php
 require_once 'settings.php';
 
-// Create connection using the variables
-$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+$conn = mysqli_connect($host, $user, $password);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+$createDb = "CREATE DATABASE IF NOT EXISTS $sql_db";
+if (mysqli_query($conn, $createDb)) {
+    echo "Database created/verified<br>";
+} else {
+    die("Error creating database: " . mysqli_error($conn));
+}
+
+mysqli_select_db($conn, $sql_db);
 
 $createEoiTable = "CREATE TABLE IF NOT EXISTS eoi (
     eoi_number INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,13 +31,12 @@ $createEoiTable = "CREATE TABLE IF NOT EXISTS eoi (
     skills JSON,
     other_skills TEXT,
     status ENUM('New', 'Current', 'Final') DEFAULT 'New',
-
     application_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
-    if (mysqli_query($conn, $createEoiTable)) {
+
+if (mysqli_query($conn, $createEoiTable)) {
     echo "EOI table created successfully";
 } else {
     echo "Error creating EOI table: " . mysqli_error($conn);
 }
-
-?>  
+?>
