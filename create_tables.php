@@ -8,6 +8,11 @@ $createEoiTable = "CREATE TABLE IF NOT EXISTS eoi (
     last_name VARCHAR(50) NOT NULL,
     date_of_birth DATE NOT NULL,
     gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    street_address VARCHAR(100) NOT NULL,
+    suburb VARCHAR(50) NOT NULL,
+    state ENUM('VIC', 'NSW', 'QLD', 'NT', 'WA', 'SA', 'TAS', 'ACT') NOT NULL,
+    postcode VARCHAR(4) NOT NULL,
     status ENUM('New', 'Current', 'Final') DEFAULT 'New'
+    
     )";
 ?>  
