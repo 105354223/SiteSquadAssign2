@@ -17,6 +17,6 @@ $createEoiTable = "CREATE TABLE IF NOT EXISTS eoi (
     skills JSON,
     other_skills TEXT
     status ENUM('New', 'Current', 'Final') DEFAULT 'New'
-    
+     application_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
 ?>  
