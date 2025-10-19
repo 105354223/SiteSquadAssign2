@@ -12,6 +12,10 @@ $createEoiTable = "CREATE TABLE IF NOT EXISTS eoi (
     suburb VARCHAR(50) NOT NULL,
     state ENUM('VIC', 'NSW', 'QLD', 'NT', 'WA', 'SA', 'TAS', 'ACT') NOT NULL,
     postcode VARCHAR(4) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    skills JSON,
+    other_skills TEXT
     status ENUM('New', 'Current', 'Final') DEFAULT 'New'
     
     )";
