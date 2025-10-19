@@ -1,6 +1,13 @@
 <?php
 require_once 'settings.php';
 
+// Create connection using the variables
+$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
 $createEoiTable = "CREATE TABLE IF NOT EXISTS eoi (
     eoi_number INT AUTO_INCREMENT PRIMARY KEY,
     job_reference VARCHAR(10) NOT NULL,
