@@ -44,6 +44,27 @@
                 <li>Khaled Mostafa Rafid</li>
                 <li><strong>Contribution:</strong>Worked on the About page</li>
             </ul>
+
+            <?php
+            include_once 'settings.php';
+            $conn = @mysqli_connect($host, $user, $password, $sql_db);
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            $createMembersTable = "CREATE TABLE IF NOT EXISTS members (
+                fname VARCHAR(30) NOT NULL,
+                lname VARCHAR(30) NOT NULL,
+                project_1_contribution VARCHAR(255) NOT NULL,
+                project_2_contribution VARCHAR(255) NOT NULL
+                )";
+
+                if ($conn->query($createMembersTable) === TRUE) {
+                    echo "Table created successfully or already exists";
+                } else {
+                    echo "Error creating table: " . $conn->error;
+                }
+            ?>
         </section>
 
         <div style="margin-top: 24px;">
