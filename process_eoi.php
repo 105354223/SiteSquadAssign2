@@ -1,5 +1,5 @@
 <?php
-    include_once 'settings.php';
+    include_once("settings.php");
 
     $conn = @mysqli_connect($host, $user, $password, $sql_db);
     if (!$conn) {
@@ -8,5 +8,5 @@
 
     // $createEoiTable = "CREATE TABLE IF NOT EXISTS eoi
 
-    
+
 ?>

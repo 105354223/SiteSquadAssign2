@@ -44,9 +44,10 @@
                 <li>Khaled Mostafa Rafid</li>
                 <li><strong>Contribution:</strong>Worked on the About page</li>
             </ul>
+        </section>
 
-            <?php
-            include_once 'settings.php';
+        <?php
+            include_once("settings.php");
             $conn = @mysqli_connect($host, $user, $password, $sql_db);
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
@@ -64,8 +65,9 @@
                 } else {
                     echo "Error creating table: " . $conn->error;
                 }
+
+            $conn->close();
             ?>
-        </section>
 
         <div style="margin-top: 24px;">
             <section>
