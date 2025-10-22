@@ -18,7 +18,7 @@
 
     <div class="formContainer">
         <h1>Job Application Form</h1>
-        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">
+        <form action="process_eoi.php" method="POST">
             <div class="formGroup">
                 <label for="JobReferenceNum" class="required">Job Reference Number</label>
                 <input type="text" id="JobReferenceNum" name="JobReferenceNum" required>
