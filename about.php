@@ -47,11 +47,10 @@
         </section>
 
         <?php
-            include_once("settings.php");
-            $conn = @mysqli_connect($host, $user, $password, $sql_db);
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
+            require_once("settings.php");
+            $conn = mysqli_connect($host, $user, $password, $sql_db)
+            or die("Connection failed: " . mysqli_connect_error());
+            echo "Connected successfully";
 
             $createMembersTable = "CREATE TABLE IF NOT EXISTS members (
                 fname VARCHAR(30) NOT NULL,
@@ -66,8 +65,15 @@
                     echo "Error creating table: " . $conn->error;
                 }
 
-            $conn->close();
-            ?>
+            $query = "SELECT * FROM members";   
+            $result = mysqli_query($conn, $query);
+
+            // if ($result && mysqli_num_rows($result) > 0) {
+            //     echo "<table class='tableContainer'>"
+            // }
+
+            mysqli_close($conn);
+        ?>
 
         <div style="margin-top: 24px;">
             <section>
