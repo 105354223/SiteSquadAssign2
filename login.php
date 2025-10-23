@@ -20,12 +20,17 @@ if ($username === 'Admin' && $password === 'Admin') {
 </head>
 <body>
   <!-- Login form for HR managers to access the system -->
-   
+
     <h2>HR Manager Login</h2>
     <form method="POST">
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Login</button>
     </form>
+    
+    <p><strong>Demo Credentials:</strong></p>
+    <p>Username: Admin</p>
+    <p>Password: Admin</p>
+    
 </body>
 </html>
