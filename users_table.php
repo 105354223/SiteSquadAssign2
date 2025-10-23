@@ -17,7 +17,7 @@ $createTable = "CREATE TABLE IF NOT EXISTS users (
 if (mysqli_query($conn, $createTable)) {
     echo "Users table created successfully<br>";
     
-    // Add admin user
+
     $password_hash = password_hash('Admin', PASSWORD_DEFAULT);
     $insertAdmin = "INSERT INTO users (username, password_hash) VALUES ('Admin', '$password_hash')";
     
