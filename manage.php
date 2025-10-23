@@ -12,4 +12,9 @@ $row = mysqli_fetch_assoc($result);
 echo "<p>Total Applications: " . $row['total'] . "</p>";
 mysqli_close($conn);
 
+//Navigation links between HR system pages for easy access and testing
+
+echo "<h3>Management Options:</h3>";
+echo "<a href='login.php'>Login Page</a><br>";
+echo "<p>More features coming soon: View applications, Filter, Update status</p>";
 ?>
