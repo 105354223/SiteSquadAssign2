@@ -27,6 +27,9 @@ $where = "";
 if (!empty($_GET['job_ref'])) {
     $where = " WHERE job_reference LIKE '%" . $_GET['job_ref'] . "%'";
 }
+if (!empty($_GET['first_name'])) {
+    $where = " WHERE first_name LIKE '%" . $_GET['first_name'] . "%'";
+}
 
 $result = mysqli_query($conn, "SELECT * FROM eoi $where ORDER BY eoi_number");
 echo "<h3>All Job Applications:</h3>";
