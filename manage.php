@@ -1,6 +1,7 @@
 <?php
 require_once 'settings.php';
 require_once 'auth.php';
+checkAuth();
 
 echo "<h1>HR Manager Dashboard</h1>";
 echo "<p>Welcome to the EOI Management System</p>";
