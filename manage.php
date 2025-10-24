@@ -16,6 +16,13 @@ echo "<input type='text' name='job_ref' placeholder='Enter job reference'>";
 echo "<button type='submit'>Search</button>";
 echo "</form>";
 
+// Search by first name
+echo "<h3>Search by First Name:</h3>";
+echo "<form method='GET'>";
+echo "<input type='text' name='first_name' placeholder='Enter first name'>";
+echo "<button type='submit'>Search</button>";
+echo "</form>";
+
 $where = "";
 if (!empty($_GET['job_ref'])) {
     $where = " WHERE job_reference LIKE '%" . $_GET['job_ref'] . "%'";
