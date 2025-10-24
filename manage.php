@@ -8,7 +8,20 @@ echo "<p>Welcome to the EOI Management System</p>";
 echo "<p>Database: $sql_db</p>";
 
 $conn = mysqli_connect($host, $user, $password, $sql_db);
-$result = mysqli_query($conn, "SELECT * FROM eoi ORDER BY eoi_number");
+
+// Search by job reference
+echo "<h3>Search by Job Reference:</h3>";
+echo "<form method='GET'>";
+echo "<input type='text' name='job_ref' placeholder='Enter job reference'>";
+echo "<button type='submit'>Search</button>";
+echo "</form>";
+
+$where = "";
+if (!empty($_GET['job_ref'])) {
+    $where = " WHERE job_reference LIKE '%" . $_GET['job_ref'] . "%'";
+}
+
+$result = mysqli_query($conn, "SELECT * FROM eoi $where ORDER BY eoi_number");
 echo "<h3>All Job Applications:</h3>";
 echo "<table border='1' style='border-collapse: collapse; width: 100%;'>";
 echo "<tr><th>EOI #</th><th>First Name</th><th>Last Name</th><th>Job Ref</th><th>Status</th></tr>";
