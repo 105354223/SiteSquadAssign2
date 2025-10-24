@@ -51,7 +51,8 @@ if (!empty($_GET['last_name'])) {
     $where = " WHERE last_name LIKE '%" . $_GET['last_name'] . "%'";
 }
 
-$result = mysqli_query($conn, "SELECT * FROM eoi $where ORDER BY eoi_number");
+$sort_field = $_GET['sort'] ?? 'eoi_number';
+$result = mysqli_query($conn, "SELECT * FROM eoi $where ORDER BY $sort_field");
 echo "<h3>All Job Applications:</h3>";
 echo "<table border='1' style='border-collapse: collapse; width: 100%;'>";
 echo "<tr><th>EOI #</th><th>First Name</th><th>Last Name</th><th>Job Ref</th><th>Status</th></tr>";
