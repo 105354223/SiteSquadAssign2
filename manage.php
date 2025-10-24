@@ -30,6 +30,16 @@ echo "<input type='text' name='last_name' placeholder='Enter last name'>";
 echo "<button type='submit'>Search</button>";
 echo "</form>";
 
+echo "<h3>Sort Applications:</h3>";
+echo "<form method='GET'>";
+echo "<select name='sort'>";
+echo "<option value='eoi_number'>EOI Number</option>";
+echo "<option value='first_name'>First Name</option>";
+echo "<option value='last_name'>Last Name</option>";
+echo "</select>";
+echo "<button type='submit'>Sort</button>";
+echo "</form>";
+
 $where = "";
 if (!empty($_GET['job_ref'])) {
     $where = " WHERE job_reference LIKE '%" . $_GET['job_ref'] . "%'";
