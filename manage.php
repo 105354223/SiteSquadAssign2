@@ -3,6 +3,14 @@ require_once 'settings.php';
 require_once 'auth.php';
 checkAuth();
 
+// Update status when form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
+    $eoi_number = $_POST['eoi_number'];
+    $new_status = $_POST['new_status'];
+    mysqli_query($conn, "UPDATE eoi SET status = '$new_status' WHERE eoi_number = $eoi_number");
+    echo "<p>Status updated!</p>";
+}
+
 echo "<h1>HR Manager Dashboard</h1>";
 echo "<p>Welcome to the EOI Management System</p>";
 echo "<p>Database: $sql_db</p>";
