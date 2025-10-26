@@ -55,7 +55,7 @@ $sort_field = $_GET['sort'] ?? 'eoi_number';
 $result = mysqli_query($conn, "SELECT * FROM eoi $where ORDER BY $sort_field");
 echo "<h3>All Job Applications:</h3>";
 echo "<table border='1' style='border-collapse: collapse; width: 100%;'>";
-echo "<tr><th>EOI #</th><th>First Name</th><th>Last Name</th><th>Job Ref</th><th>Status</th><th>Cange Status</th></tr>";
+echo "<tr><th>EOI #</th><th>First Name</th><th>Last Name</th><th>Job Ref</th><th>Status</th><th>Change Status</th></tr>";
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
     echo "<td>" . $row['eoi_number'] . "</td>";
@@ -63,6 +63,17 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<td>" . $row['last_name'] . "</td>";
     echo "<td>" . $row['job_reference'] . "</td>";
     echo "<td>" . $row['status'] . "</td>";
+    echo "<td>";
+    echo "<form method='POST'>";
+    echo "<input type='hidden' name='eoi_number' value='".$row['eoi_number']."'>";
+    echo "<select name='new_status'>";
+    echo "<option value='New'>New</option>";
+    echo "<option value='Current'>Current</option>";
+    echo "<option value='Final'>Final</option>";
+    echo "</select>";
+    echo "<button type='submit' name='update_status'>Update</button>";
+    echo "</form>";
+     echo "</td>";
     echo "</tr>";
 }
 echo "</table>";
