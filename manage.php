@@ -48,6 +48,13 @@ echo "</select>";
 echo "<button type='submit'>Sort</button>";
 echo "</form>";
 
+// Delete by job reference 
+echo "<h3>Delete by Job Reference:</h3>";
+echo "<form method='POST'>";
+echo "<input type='text' name='job_reference' placeholder='Job reference'>";
+echo "<button type='submit' name='delete_by_jobref'>Delete All</button>";
+echo "</form>";
+
 $where = "";
 if (!empty($_GET['job_ref'])) {
     $where = " WHERE job_reference LIKE '%" . $_GET['job_ref'] . "%'";
