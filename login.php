@@ -1,4 +1,5 @@
 <?php
+ session_start();
 require_once 'settings.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -7,8 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
     
 if ($username === 'Admin' && $password === 'Admin') {
-    
-    session_start();
+
         $_SESSION['logged_in'] = true;
         $_SESSION['username'] = $username;
         header('Location: manage.php');
@@ -16,11 +16,9 @@ if ($username === 'Admin' && $password === 'Admin') {
     } else {
         echo "Invalid credentials";
     }
-
 }
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
