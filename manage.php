@@ -11,6 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
     echo "<p>Status updated!</p>";
 }
 
+if (isset($_POST['delete_by_jobref'])) {
+    $job_ref = $_POST['job_reference'];
+    mysqli_query($conn, "DELETE FROM eoi WHERE job_reference = '$job_ref'");
+    echo "<p>Applications deleted!</p>";
+}
+
 echo "<h1>HR Manager Dashboard</h1>";
 echo "<p>Welcome to the EOI Management System</p>";
 echo "<p>Database: $sql_db</p>";
