@@ -2,15 +2,23 @@
 require_once 'settings.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Login form submitted
 
     $username = trim($_POST['username']);
     $password = $_POST['password'];
     
 if ($username === 'Admin' && $password === 'Admin') {
-        echo "Login successful!";
+    
+    session_start();
+        $_SESSION['logged_in'] = true;
+        $_SESSION['username'] = $username;
+        header('Location: manage.php');
+        exit;
+    } else {
+        echo "Invalid credentials";
     }
+
 }
+
 ?>
 
 <!DOCTYPE html>
