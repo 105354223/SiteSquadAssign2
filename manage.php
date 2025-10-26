@@ -3,6 +3,8 @@ require_once 'settings.php';
 require_once 'auth.php';
 checkAuth();
 
+$conn = mysqli_connect($host, $user, $password, $sql_db);
+
 // Update status when form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
     $eoi_number = $_POST['eoi_number'];
@@ -20,8 +22,6 @@ if (isset($_POST['delete_by_jobref'])) {
 echo "<h1>HR Manager Dashboard</h1>";
 echo "<p>Welcome to the EOI Management System</p>";
 echo "<p>Database: $sql_db</p>";
-
-$conn = mysqli_connect($host, $user, $password, $sql_db);
 
 // Search by job reference
 echo "<h3>Search by Job Reference:</h3>";
