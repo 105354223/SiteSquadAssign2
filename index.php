@@ -31,7 +31,7 @@
 
     <main class="flexContainer">
         <section class="flexContent">
-                <div class="hero-section">
+                  <div class="hero-section">
                 <h1>Improving Digital Servicing for Everyone</h1>
                  <p class="hero-subtitle">SiteSquad is dedicated to modernizing government services through innova
                     tive IT solutions and digital platforms that serve citizens better.</p>
