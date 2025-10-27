@@ -69,9 +69,20 @@
                 point. Navigate through the different sections of our website to
                 discover more.
             </p>
-            <h3><strong>Our Commitment</strong></h3>
+        
+        <div class="team-collaboration">
+            <!-- Free stock image - Source unknown -->
+         <img src="images/side-img.jpg" alt="Our team collaborating on digital projects" class="collaboration-img">
+         <div class="collaboration-content">
+            <h3>Collaborative Digital Environment</h3>
+            <p>Our team works together to create innovative solutions that serve citizens better. From concept to deployment, we prioritize user experience and technological excellence.</p>
+            <p>Join professionals who are passionate about making a difference through technology and public service.</p>
+       </div>
+    </div>
+            
+             <h3><strong>Our Commitment</strong></h3>
 
-            <p>We are committed to serving with transparency, accountability, and efficiency.
+             <p>We are committed to serving with transparency, accountability, and efficiency.
                 Our focus is not only on creating opportunities but also on delivering services
                 that strengthen trust between the government and the people it serves.</p>
 
