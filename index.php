@@ -138,9 +138,25 @@
          <h2>Career Growth Pathways</h2>
          <p>Whether you are starting as a graduate or joining as an experienced professional, we provide clear pathways for advancement.
          <br> From entry-level IT roles to leadership opportunities, SiteSquad is committed to helping you achieve your career goals.</p>
-  </div>
- </section>
-                    <img src="images/side-img.jpg" alt="Representative image of the website theme" class="sideImage">
+  </div> 
+       <div class="quick-navigation">
+        <h3>Quick Access to Our Services</h3>
+        <div class="nav-actions">
+        <a href="jobs.php" class="nav-action">
+            <strong>Browse Opportunities</strong>
+            <span>View all current government IT positions</span>
+        </a>
+        <a href="apply.php" class="nav-action">
+            <strong>Start Application</strong>
+            <span>Submit your Expression of Interest</span>
+        </a>
+        <a href="about.php" class="nav-action">
+            <strong>Our Team</strong>
+            <span>Meet the people behind our mission</span>
+        </a>
+      </div>
+    </div>
+   </section>
     </main>
 
     <?php
