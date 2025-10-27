@@ -28,16 +28,37 @@
     include 'Inc_Files/header.inc';
     ?>
 
-
     <main class="flexContainer">
-        <section class="flexContent">
-                  <div class="hero-section">
-                <h1>Improving Digital Servicing for Everyone</h1>
-                 <p class="hero-subtitle">SiteSquad is dedicated to modernizing government services through innova
-                    tive IT solutions and digital platforms that serve citizens better.</p>
-               </div>
+       <section class="flexContent">
 
-
+        <div class="hero-section">
+          <h1>Improving Digital Servicing for Everyone</h1>
+           <p class="hero-subtitle">SiteSquad is dedicated to modernizing government services through innovative IT solutions and digital platforms that serve citizens better.</p>
+        </div>
+               <div class="services-showcase">
+                  <h2>Our Digital Service Platforms</h2>
+              <div class="service-platforms">
+                 <div class="platform">
+            <!-- Image Source: Unsplash - Team Collaboration -->
+               <img src="images/collaboration.jpg" alt="Team collaboration in digital services" class="platform-img">
+            <div class="platform-content">
+                  <h3>Career Opportunities Portal</h3>
+                  <p>Discover exciting IT positions within government digital services. Browse current openings and find your perfect role in shaping the future of public service.</p>
+                   <a href="jobs.php" class="platform-link">Explore Available Positions</a>
+            </div>
+        </div>
+        
+              <div class="platform">
+            <!-- Image Source: Unsplash - Government Building -->
+            <img src="images/building.jpg" alt="Government building and infrastructure" class="platform-img">
+            <div class="platform-content">
+                <h3>Online Application System</h3>
+                <p>Submit your Expression of Interest through our secure digital portal. Streamlined process with real-time tracking and instant confirmation.</p>
+                <a href="apply.php" class="platform-link">Start Your Application</a>
+            </div>
+          </div>
+        </div>
+     </div>
             <h2><u><strong>Welcome to SiteSquad</strong></u></h2>
             <p>
                 Welcome to our website, your gateway to exploring job opportunities,
