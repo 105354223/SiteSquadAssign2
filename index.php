@@ -48,10 +48,10 @@
             </div>
         </div>
         
-              <div class="platform">
+        <div class="platform">
             <!-- Image Source: Unsplash - Government Building -->
             <img src="images/building.jpg" alt="Government building and infrastructure" class="platform-img">
-            <div class="platform-content">
+         <div class="platform-content">
                 <h3>Online Application System</h3>
                 <p>Submit your Expression of Interest through our secure digital portal. Streamlined process with real-time tracking and instant confirmation.</p>
                 <a href="apply.php" class="platform-link">Start Your Application</a>
@@ -73,19 +73,35 @@
         <div class="team-collaboration">
             <!-- Free stock image - Source unknown -->
          <img src="images/side-img.jpg" alt="Our team collaborating on digital projects" class="collaboration-img">
-         <div class="collaboration-content">
+          <div class="collaboration-content">
             <h3>Collaborative Digital Environment</h3>
             <p>Our team works together to create innovative solutions that serve citizens better. From concept to deployment, we prioritize user experience and technological excellence.</p>
             <p>Join professionals who are passionate about making a difference through technology and public service.</p>
        </div>
     </div>
-            
              <h3><strong>Our Commitment</strong></h3>
 
              <p>We are committed to serving with transparency, accountability, and efficiency.
                 Our focus is not only on creating opportunities but also on delivering services
                 that strengthen trust between the government and the people it serves.</p>
-
+                
+        <div class="technology-innovation">
+           <h3>Driving Digital Transformation</h3>
+        <div class="innovation-grid">
+        <div class="innovation-item">
+            <h4>Modern Infrastructure</h4>
+            <p>Leveraging scalable architecture and robust systems to deliver reliable government services to all citizens.</p>
+        </div>
+         <div class="innovation-item">
+            <h4>Secure Systems</h4>
+            <p>Implementing enterprise-grade security measures through collaborative efforts to protect citizen data and government assets.</p>
+         </div>
+          <div class="innovation-item">
+            <h4>Accessible Design</h4>
+            <p>Creating services that work seamlessly across all platforms, ensuring maximum accessibility for every citizen.</p>
+          </div>
+      </div>
+    </div>
             <h3><strong>Join Us</strong></h3>
             <p>Looking to be part of something bigger? At SiteSquad, every role contributes to
                 shaping the future of digital governance. Whether you are a student, a professional,
