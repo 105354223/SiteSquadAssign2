@@ -31,9 +31,12 @@
 
     <main class="flexContainer">
         <section class="flexContent">
-            <h1>Improving Digital Servicing for Everyone</h1>
-            <p>We are committed to serving citizens with integrity,transparency, and efficiency. Explore our website to
-                learn more about career opportunities, services, and our dedicated team.</p>
+                <div class="hero-section">
+                <h1>Improving Digital Servicing for Everyone</h1>
+                 <p class="hero-subtitle">SiteSquad is dedicated to modernizing government services through innova
+                    tive IT solutions and digital platforms that serve citizens better.</p>
+               </div>
+
 
             <h2><u><strong>Welcome to SiteSquad</strong></u></h2>
             <p>
