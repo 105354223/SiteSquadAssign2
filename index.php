@@ -84,7 +84,7 @@
              <p>We are committed to serving with transparency, accountability, and efficiency.
                 Our focus is not only on creating opportunities but also on delivering services
                 that strengthen trust between the government and the people it serves.</p>
-                
+
         <div class="technology-innovation">
            <h3>Driving Digital Transformation</h3>
         <div class="innovation-grid">
@@ -102,18 +102,38 @@
           </div>
       </div>
     </div>
-            <h3><strong>Join Us</strong></h3>
-            <p>Looking to be part of something bigger? At SiteSquad, every role contributes to
-                shaping the future of digital governance. Whether you are a student, a professional,
-                or someone eager to contribute to public service, there's a place for you in our
-                mission.
-
-                Visit our <a href="jobs.html">Jobs</a> to explore current opportunities or head to
-                <a href="apply.html">Apply Now</a> to start
-                your application today
-            </p>
-            <p><b>Want to know more about us?</b> Visit <a href="about.html">About Us.</a></p>
-        </section>
+            <!-- Career Pathways Section - Matching Actual Job Roles -->
+    <div class="career-pathways">
+    <h3>Shape Your Career in Digital Government</h3>
+    <div class="pathway-options">
+        <div class="pathway">
+            <h4>Software Development</h4>
+            <p>Build applications that serve millions of citizens with cutting-edge technology stacks and collaborative development.</p>
+            <a href="jobs.php" class="pathway-link">View Developer Roles</a>
+        </div>
+        <div class="pathway">
+            <h4>IT Security</h4>
+            <p>Protect critical infrastructure and ensure data privacy across government systems through innovative security solutions.</p>
+            <a href="jobs.php" class="pathway-link">Explore Security Positions</a>
+        </div>
+        <div class="pathway">
+            <h4>Systems Administration</h4>
+            <p>Maintain and optimize government IT infrastructure to ensure reliable service delivery and system performance.</p>
+            <a href="jobs.php" class="pathway-link">Find Admin Opportunities</a>
+        </div>
+        <div class="pathway">
+            <h4>Data Analytics</h4>
+            <p>Transform government data into actionable insights that drive policy decisions and service improvements.</p>
+            <a href="jobs.php" class="pathway-link">Explore Analyst Roles</a>
+        </div>
+        <div class="pathway">
+            <h4>Project Management</h4>
+            <p>Lead digital transformation initiatives and coordinate cross-functional teams to deliver successful government projects.</p>
+            <a href="jobs.php" class="pathway-link">View Manager Positions</a>
+          </div>
+      </div>
+   </div>
+ </section>
                     <img src="images/side-img.jpg" alt="Representative image of the website theme" class="sideImage">
     </main>
 
