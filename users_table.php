@@ -17,13 +17,25 @@ $createTable = "CREATE TABLE IF NOT EXISTS users (
 if (mysqli_query($conn, $createTable)) {
     echo "Users table created successfully<br>";
     
-
-    $password_hash = password_hash('Admin', PASSWORD_DEFAULT);
-    $insertAdmin = "INSERT INTO users (username, password_hash) VALUES ('Admin', '$password_hash')";
+    // Check if Admin user already exists
+    $checkAdmin = "SELECT id FROM users WHERE username = 'Admin'";
+    $result = mysqli_query($conn, $checkAdmin);
     
-    if (mysqli_query($conn, $insertAdmin)) {
-        echo "Admin user created (Username: Admin, Password: Admin)";
+    if (mysqli_num_rows($result) == 0) {
+        // Admin doesn't exist, create it
+        $password_hash = password_hash('Admin', PASSWORD_DEFAULT);
+        $insertAdmin = "INSERT INTO users (username, password_hash) VALUES ('Admin', '$password_hash')";
+        
+        if (mysqli_query($conn, $insertAdmin)) {
+            echo "Admin user created (Username: Admin, Password: Admin)";
+        } else {
+            echo "Error creating Admin user: " . mysqli_error($conn);
+        }
+    } else {
+        echo "Admin user already exists<br>";
     }
+} else {
+    echo "Error creating table: " . mysqli_error($conn);
 }
 
 mysqli_close($conn);
