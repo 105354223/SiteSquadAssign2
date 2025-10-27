@@ -133,6 +133,12 @@
           </div>
       </div>
    </div>
+        <!-- Career Growth Section -->
+       <div class="career-growth">
+         <h2>Career Growth Pathways</h2>
+         <p>Whether you are starting as a graduate or joining as an experienced professional, we provide clear pathways for advancement.
+         <br> From entry-level IT roles to leadership opportunities, SiteSquad is committed to helping you achieve your career goals.</p>
+  </div>
  </section>
                     <img src="images/side-img.jpg" alt="Representative image of the website theme" class="sideImage">
     </main>
