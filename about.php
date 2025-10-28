@@ -29,51 +29,65 @@
             </ul>
         </section>
 
-        <section>
-            <h2>Member contributions and quotes</h2>
-            <ul id="memberList">
-                <li>Julien Ambrose</li>
-                <li><strong>Contribution:</strong> Worked on the CSS and Apply page</li>
-
-                <li>Kashfia Rahman</li>
-                <li><strong>Contribution:</strong>Worked on the Index Page</li>
-
-                <li>Tamim Rahman</li>
-                <li><strong>Contribution:</strong>Jobs Page and Images</li>
-
-                <li>Khaled Mostafa Rafid</li>
-                <li><strong>Contribution:</strong>Worked on the About page</li>
-            </ul>
-        </section>
+    <section>
+        <h2>Member contributions and quotes</h2>
 
         <?php
-            require_once("settings.php");
-            $conn = mysqli_connect($host, $user, $password, $sql_db)
-            or die("Connection failed: " . mysqli_connect_error());
-            echo "Connected successfully";
+        require_once("settings.php");
+        $conn = mysqli_connect($host, $user, $password, $sql_db)
+        or die("Connection failed: " . mysqli_connect_error());
 
-            $createMembersTable = "CREATE TABLE IF NOT EXISTS members (
-                fname VARCHAR(30) NOT NULL,
-                lname VARCHAR(30) NOT NULL,
-                project_1_contribution VARCHAR(255) NOT NULL,
-                project_2_contribution VARCHAR(255) NOT NULL
-                )";
+        $createMembersTable = "CREATE TABLE IF NOT EXISTS members (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            fname VARCHAR(30) NOT NULL,
+            lname VARCHAR(30) NOT NULL,
+            project_1_contribution VARCHAR(255) NOT NULL,
+            project_2_contribution VARCHAR(255) NOT NULL
+        )";
 
-                if ($conn->query($createMembersTable) === TRUE) {
-                    echo "Table created successfully or already exists";
-                } else {
-                    echo "Error creating table: " . $conn->error;
-                }
+        if ($conn->query($createMembersTable) === TRUE) {
+            echo "<!-- Table created successfully or already exists -->";
+        } else {
+            echo "<!-- Error creating table: " . $conn->error . " -->";
+        }
 
-            $query = "SELECT * FROM members";   
-            $result = mysqli_query($conn, $query);
+        $checkEmpty = "SELECT COUNT(*) as count FROM members";
+        $result = mysqli_query($conn, $checkEmpty);
+        $row = mysqli_fetch_assoc($result);
 
-            // if ($result && mysqli_num_rows($result) > 0) {
-            //     echo "<table class='tableContainer'>"
-            // }
+        if ($row['count'] == 0) {
+            $insertData = "INSERT INTO members (fname, lname, project_1_contribution, project_2_contribution) VALUES
+                ('Julien', 'Ambrose', 'Worked on the CSS styling', 'Developed the Apply page functionality'),
+                ('Kashfia', 'Rahman', 'Created the Index Page layout', 'Enhanced user interface design'),
+                ('Tamim', 'Ahmed', 'Worked on Jobs Page structure', 'Managed and optimized images'),
+                ('Khaled', 'Rafid', 'Built the About page framework', 'Implemented database integration')";
 
-            mysqli_close($conn);
+            if ($conn->query($insertData) === TRUE) {
+                echo "<!-- Sample data inserted successfully -->";
+            } else {
+                echo "<!-- Error inserting data: " . $conn->error . " -->";
+            }
+        }
+
+        $query = "SELECT fname, lname, project_1_contribution, project_2_contribution FROM members";   
+        $result = mysqli_query($conn, $query);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            echo "<ul id='memberList'>";
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<li><strong>{$row['fname']} {$row['lname']}</strong></li>";
+                echo "<li><strong>Project 1:</strong> {$row['project_1_contribution']}</li>";
+                echo "<li><strong>Project 2:</strong> {$row['project_2_contribution']}</li>";
+                echo "<br>";
+            }
+            echo "</ul>";
+        } else {
+            echo "<p>No member contributions found.</p>";
+        }
+
+        mysqli_close($conn);
         ?>
+    </section>
 
         <div style="margin-top: 24px;">
             <section>
