@@ -91,7 +91,6 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* Services Showcase Grid */
 .servicesShowcase {
     margin-bottom: 50px;
 }
@@ -154,7 +153,6 @@ nav a:hover {
     background-color: #0028b3;
 }
 
-/* Team Collaboration Section */
 .teamCollaboration {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -178,7 +176,6 @@ nav a:hover {
     font-size: 1.5rem;
 }
 
-/* Technology Innovation Grid */
 .technologyInnovation {
     margin: 50px 0;
 }
@@ -215,7 +212,6 @@ nav a:hover {
     font-size: 1.3rem;
 }
 
-/* Career Pathways Grid */
 .careerPathways {
     margin: 50px 0;
 }
@@ -265,7 +261,6 @@ nav a:hover {
     border-color: #00167d;
 }
 
-/* Career Growth Section */
 .careerGrowth {
     background: linear-gradient(135deg, #00167d 0%, #0033cc 100%);
     color: white;
@@ -281,7 +276,6 @@ nav a:hover {
     color: white;
 }
 
-/* Quick Navigation Grid */
 .quickNav {
     padding: 40px 0;
 }
@@ -325,7 +319,7 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-.nav-action span {
+.navAction span {
     color: #666;
     font-size: 0.9rem;
 }
@@ -418,8 +412,7 @@ aside {
 }
 
 /* Login Page CSS */
-/* Login Page Styles */
-.login-body {
+.loginBody {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #00167d 0%, #0033cc 100%);
     margin: 0;
@@ -430,7 +423,7 @@ aside {
     justify-content: center;
 }
 
-.login-container {
+.loginContainer {
     background: white;
     padding: 40px;
     border-radius: 15px;
@@ -440,12 +433,12 @@ aside {
     margin: 20px;
 }
 
-.login-header {
+.loginHeader {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.login-header h2 {
+.loginHeader h2 {
     color: #00167d;
     margin: 0 0 10px 0;
     font-size: 2rem;
@@ -458,25 +451,25 @@ aside {
     margin: 0;
 }
 
-.login-form {
+.loginForm {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.form-group {
+.formGroup {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.form-label {
+.formLabel {
     color: #333;
     font-weight: 600;
     font-size: 0.9rem;
 }
 
-.login-input {
+.loginInput {
     padding: 15px;
     border: 2px solid #e9ecef;
     border-radius: 8px;
@@ -485,18 +478,18 @@ aside {
     background-color: #f8f9fa;
 }
 
-.login-input:focus {
+.loginInput:focus {
     outline: none;
     border-color: #00167d;
     background-color: white;
     box-shadow: 0 0 0 3px rgba(0, 22, 125, 0.1);
 }
 
-.login-input::placeholder {
+.loginInput::placeholder {
     color: #999;
 }
 
-.login-button {
+.loginButton {
     background: linear-gradient(135deg, #00167d 0%, #0033cc 100%);
     color: white;
     border: none;
@@ -509,16 +502,16 @@ aside {
     margin-top: 10px;
 }
 
-.login-button:hover {
+.loginButton:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.login-button:active {
+.loginButton:active {
     transform: translateY(0);
 }
 
-.demo-credentials {
+.demoCredentials {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
@@ -526,19 +519,19 @@ aside {
     border-left: 4px solid #00167d;
 }
 
-.demo-credentials p {
+.demoCredentials p {
     margin: 8px 0;
     color: #333;
 }
 
-.demo-credentials strong {
+.demoCredentials strong {
     color: #00167d;
     display: block;
     margin-bottom: 10px;
     font-size: 1rem;
 }
 
-.error-message {
+.errorMessage {
     background-color: #f8d7da;
     color: #721c24;
     padding: 12px 15px;
@@ -549,8 +542,215 @@ aside {
     font-weight: 500;
 }
 
-.login-container {
+.loginContainer {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Manage Page CSS */
+.hrDashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.hrHeader {
+    background: linear-gradient(135deg, #00167d 0%, #0033cc 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hrHeader h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+    color: white;
+}
+
+.hrHeader p {
+    margin: 5px 0;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.hrSection {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.hrSection h3 {
+    color: #00167d;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.hrForm {
+    display: flex;
+    gap: 15px;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.hrForm-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.hrInput {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.hrInput:focus {
+    outline: none;
+    border-color: #00167d;
+}
+
+.hrSelect {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.hrButton {
+    background-color: #00167d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.hrButton:hover {
+    background-color: #0028b3;
+}
+
+.hrButton.delete {
+    background-color: #dc3545;
+}
+
+.hrButton.delete:hover {
+    background-color: #c82333;
+}
+
+.hrTable-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.hrTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hrTable th {
+    background-color: #00167d;
+    color: white;
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.hrTable td {
+    padding: 12px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 14px;
+}
+
+.hrTable tr:hover {
+    background-color: #f8f9fa;
+}
+
+.statusForm {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+}
+
+.statusSelect {
+    padding: 6px 8px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 100px;
+}
+
+.statusUpdate-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.statusUpdate-btn:hover {
+    background-color: #218838;
+}
+
+.hrNavigation {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.hrNavigation h3 {
+    color: #00167d;
+    margin-bottom: 15px;
+}
+
+.hrLink {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.hrLink:hover {
+    background-color: #545b62;
+}
+
+.hrMessage {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    border: 1px solid #c3e6cb;
 }
 
 /* Apply Page CSS */
@@ -800,21 +1000,50 @@ tbody tr {
 
 /* Responsive CSS */
 
+@media (max-width: 768px) {
+    .hrDashboard {
+        padding: 15px;
+    }
+    
+    .hrForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .hrForm-group {
+        min-width: auto;
+    }
+    
+    .hrButton {
+        width: 100%;
+    }
+    
+    .statusForm {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .statusSelect,
+    .statusUpdate-btn {
+        width: 100%;
+    }
+}
+
 @media (max-width: 480px) {
-    .login-container {
+    .loginContainer {
         padding: 30px 25px;
         margin: 15px;
     }
     
-    .login-header h2 {
+    .loginHeader h2 {
         font-size: 1.7rem;
     }
     
-    .login-input {
+    .loginInput {
         padding: 12px;
     }
     
-    .login-button {
+    .loginButton {
         padding: 12px;
     }
 }
