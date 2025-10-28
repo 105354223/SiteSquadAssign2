@@ -19,10 +19,10 @@
         <!-- Navigation -->
         <nav class="navContainer">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../jobs.html">Jobs</a></li>
-                <li><a href="../apply.html">Apply Now</a></li>
-                <li><a href="../about.html">About</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../jobs.php">Jobs</a></li>
+                <li><a href="../apply.php">Apply Now</a></li>
+                <li><a href="../about.php">About</a></li>
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">FAQ</a></li>
             </ul>
