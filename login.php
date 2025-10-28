@@ -20,23 +20,45 @@ if ($username === 'Admin' && $password === 'Admin') {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR Manager Login</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
-  <!-- Login form for HR managers to access the system -->
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-header">
+            <h2>HR Manager Login</h2>
+            <p class="login-subtitle">Access the EOI Management System</p>
+        </div>
+        
+        <?php if (!empty($error)): ?>
+            <div class="error-message">
+                <?php echo $error; ?>
+            </div>
+        <?php endif; ?>
 
-    <h2>HR Manager Login</h2>
-    <form method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
-    
-    <p><strong>Demo Credentials:</strong></p>
-    <p>Username: Admin</p>
-    <p>Password: Admin</p>
-    
+        <form method="POST" class="login-form">
+            <div class="form-group">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" placeholder="Enter your username" class="login-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" placeholder="Enter your password" class="login-input" required>
+            </div>
+            
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        
+        <div class="demo-credentials">
+            <strong>Admin Credentials:</strong>
+            <p>Username: Admin</p>
+            <p>Password: Admin</p>
+        </div>
+    </div>
 </body>
 </html>
