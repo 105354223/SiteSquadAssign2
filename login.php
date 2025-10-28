@@ -27,34 +27,34 @@ if ($username === 'Admin' && $password === 'Admin') {
     <title>HR Manager Login</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body class="login-body">
-    <div class="login-container">
-        <div class="login-header">
+<body class="loginBody">
+    <div class="loginContainer">
+        <div class="loginHeader">
             <h2>HR Manager Login</h2>
-            <p class="login-subtitle">Access the EOI Management System</p>
+            <p class="loginSubtitle">Access the EOI Management System</p>
         </div>
         
         <?php if (!empty($error)): ?>
-            <div class="error-message">
+            <div class="errorMessage">
                 <?php echo $error; ?>
             </div>
         <?php endif; ?>
 
         <form method="POST" class="login-form">
-            <div class="form-group">
-                <label class="form-label">Username</label>
-                <input type="text" name="username" placeholder="Enter your username" class="login-input" required>
+            <div class="formGroup">
+                <label class="formLabel">Username</label>
+                <input type="text" name="username" placeholder="Enter your username" class="loginInput" required>
             </div>
             
             <div class="form-group">
                 <label class="form-label">Password</label>
-                <input type="password" name="password" placeholder="Enter your password" class="login-input" required>
+                <input type="password" name="password" placeholder="Enter your password" class="loginInput" required>
             </div>
             
-            <button type="submit" class="login-button">Login</button>
+            <button type="submit" class="loginButton">Login</button>
         </form>
         
-        <div class="demo-credentials">
+        <div class="demoCredentials">
             <strong>Admin Credentials:</strong>
             <p>Username: Admin</p>
             <p>Password: Admin</p>
