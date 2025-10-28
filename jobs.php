@@ -43,15 +43,15 @@
 			</div>
 			<div class="careerItem">
 				<img src="images/Systems_administrator.jpg" alt="Systems Administrator" width="200" height="120">
-				<a href=" ">Systems Administrator</a>
+				<a href="#">Systems Administrator</a>
 			</div>
 			<div class="careerItem">
 				<img src="images/Data_analyst.jpg" alt="Data Analyst" width="200" height="120">
-				<a href=" ">Data Analyst</a>
+				<a href="#">Data Analyst</a>
 			</div>
 			<div class="careerItem">
 				<img src="images/Project_manager.jpg" alt="Project manager" width="200" height="120">
-				<a href=" ">Project Manager</a>
+				<a href="#">Project Manager</a>
 			</div>
 		</div>
 		<!-- inline CSS -->
