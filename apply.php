@@ -18,42 +18,42 @@
 
     <div class="formContainer">
         <h1>Job Application Form</h1>
-        <form action="process_eoi.php" method="POST">
+        <form action="process_eoi.php" method="POST" novalidate>
             <div class="formGroup">
                 <label for="JobReferenceNum" class="required">Job Reference Number</label>
-                <input type="text" id="JobReferenceNum" name="JobReferenceNum" required>
+                <input type="text" id="JobReferenceNum" name="JobReferenceNum">
             </div>
 
             <div class="formRow">
                 <div class="formGroup">
                     <label for="FirstName" class="required">First Name</label>
-                    <input type="text" id="FirstName" name="FirstName" maxlength="20" required>
+                    <input type="text" id="FirstName" name="FirstName" maxlength="20">
                 </div>
 
                 <div class="formGroup">
                     <label for="LastName" class="required">Last Name</label>
-                    <input type="text" id="LastName" name="LastName" maxlength="20" required>
+                    <input type="text" id="LastName" name="LastName" maxlength="20">
                 </div>
             </div>
 
             <div class="formGroup">
                 <label for="DateOfBirth" class="required">Date of Birth</label>
-                <input type="date" id="DateOfBirth" name="DateOfBirth" required>
+                <input type="date" id="DateOfBirth" name="DateOfBirth">
             </div>
 
             <div class="formGroup">
                 <label class="required">Gender</label>
                 <div class="radioGroup">
                     <div class="radioOption">
-                        <input type="radio" id="GenderMale" name="Gender" value="Male" required>
+                        <input type="radio" id="GenderMale" name="Gender" value="Male">
                         <label for="GenderMale">Male</label>
                     </div>
                     <div class="radioOption">
-                        <input type="radio" id="GenderFemale" name="Gender" value="Female" required>
+                        <input type="radio" id="GenderFemale" name="Gender" value="Female">
                         <label for="GenderFemale">Female</label>
                     </div>
                     <div class="radioOption">
-                        <input type="radio" id="GenderOther" name="Gender" value="Other" required>
+                        <input type="radio" id="GenderOther" name="Gender" value="Other">
                         <label for="GenderOther">Other</label>
                     </div>
                 </div>
@@ -61,18 +61,18 @@
 
             <div class="formGroup">
                 <label for="Address" class="required">Address</label>
-                <input type="text" id="Address" name="Address" required>
+                <input type="text" id="Address" name="Address">
             </div>
 
             <div class="formRow">
                 <div class="formGroup">
                     <label for="suburb" class="required">Suburb</label>
-                    <input type="text" id="suburb" name="suburb" required>
+                    <input type="text" id="suburb" name="suburb">
                 </div>
 
                 <div class="formGroup">
                     <label for="State" class="required">State</label>
-                    <select id="State" name="State" required>
+                    <select id="State" name="State">
                         <option value="" disabled selected>Select your state</option>
                         <option value="VIC">VIC</option>
                         <option value="NSW">NSW</option>
@@ -87,18 +87,18 @@
 
                 <div class="formGroup">
                     <label for="Postcode" class="required">Postcode</label>
-                    <input type="text" id="Postcode" name="Postcode" required>
+                    <input type="text" id="Postcode" name="Postcode">
                 </div>
             </div>
 
             <div class="formGroup">
                 <label for="email" class="required">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
             </div>
 
             <div class="formGroup">
                 <label for="PhoneNumber" class="required">Phone Number</label>
-                <input type="text" id="PhoneNumber" name="PhoneNumber" required>
+                <input type="text" id="PhoneNumber" name="PhoneNumber">
             </div>
 
             <div class="formGroup">
