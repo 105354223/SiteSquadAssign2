@@ -12,6 +12,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+// Create eoi table if it doesn't exist
 $createEoiTable = "CREATE TABLE IF NOT EXISTS eoi (
     EOInumber INT AUTO_INCREMENT PRIMARY KEY,
     JobReferenceNum VARCHAR(10) NOT NULL,
@@ -43,7 +44,7 @@ function sanitize_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-
+// Retrieve and sanitize form inputs
 $JobReferenceNum = sanitize_input($_POST['JobReferenceNum'] ?? '');
 $FirstName = sanitize_input($_POST['FirstName'] ?? '');
 $LastName = sanitize_input($_POST['LastName'] ?? '');
@@ -147,7 +148,7 @@ if (!empty($SkillList)) {
 if (strlen($OtherSkills) > 500) {
     $errors[] = "Other skills must be 500 characters or less.";
 }
-
+// If there are validation errors, display them and stop processing
 if (!empty($errors)) {
     echo "<!DOCTYPE html>
     <html lang='en'>
