@@ -35,19 +35,11 @@
 		<div class="careersGrid">
 			<div class="careerItem">
 				<img src="images/Software_developer.jpg" alt="Software Developer" width="200" height="120">
-<<<<<<< HEAD
-				<a href="Pages/software.html">Software Developer</a>
+				<a href="Pages/software.php">Software Developer</a>
 			</div>
 			<div class="careerItem">
 				<img src="images/It_security.jpg" alt="IT security Analyst" width="200" height="120">
-				<a href="Pages/security.html">IT Security Analyst</a>
-=======
-				<a href="pages/software.php">Software Developer</a>
-			</div>
-			<div class="careerItem">
-				<img src="images/It_security.jpg" alt="IT security Analyst" width="200" height="120">
-				<a href="pages/security.php">IT Security Analyst</a>
->>>>>>> 7c1bb3f (renamed all .html  to .php to enable includes)
+				<a href="Pages/security.php">IT Security Analyst</a>
 			</div>
 			<div class="careerItem">
 				<img src="images/Systems_administrator.jpg" alt="Systems Administrator" width="200" height="120">
