@@ -35,11 +35,19 @@
 		<div class="careersGrid">
 			<div class="careerItem">
 				<img src="images/Software_developer.jpg" alt="Software Developer" width="200" height="120">
+<<<<<<< HEAD
 				<a href="Pages/software.html">Software Developer</a>
 			</div>
 			<div class="careerItem">
 				<img src="images/It_security.jpg" alt="IT security Analyst" width="200" height="120">
 				<a href="Pages/security.html">IT Security Analyst</a>
+=======
+				<a href="pages/software.php">Software Developer</a>
+			</div>
+			<div class="careerItem">
+				<img src="images/It_security.jpg" alt="IT security Analyst" width="200" height="120">
+				<a href="pages/security.php">IT Security Analyst</a>
+>>>>>>> 7c1bb3f (renamed all .html  to .php to enable includes)
 			</div>
 			<div class="careerItem">
 				<img src="images/Systems_administrator.jpg" alt="Systems Administrator" width="200" height="120">
@@ -62,7 +70,7 @@
 				the correct <strong>5-character job reference number</strong> (e.g., SSQ01, SSQ02).
 			</p>
 			<p>
-				Applications must be submitted through the <a href="apply.html">Apply Now form</a>.
+				Applications must be submitted through the <a href="apply.php">Apply Now form</a>.
 				For assistance, contact us at <a href="mailto:info@sitesquad.gov">info@sitesquad.gov</a>.
 			</p>
 		</aside>
@@ -89,7 +97,7 @@
 	<p><b>➡️ A few surprising facts about our team and the work we do.</b></p>
 <p>At SiteSquad, we take pride in the impact of our work but we also enjoy celebrating the lighter side of our journey. Did you know our team has written over 500,000 lines of code to power secure government services and protect more than 10 million citizen records every year? With a workforce representing 15+ cultural backgrounds, we thrive on diversity and fresh ideas, delivering projects at remarkable speed our fastest launch went live in just three weeks. Every day, our analysts process over 1TB of data, helping shape smarter, evidence based decisions, and our commitment to excellence has earned us recognition as a Top Digital Services Innovator for three consecutive years. And while innovation drives us forward, coffee certainly fuels us too — with over 1,200 cups consumed each month, our teams are always energised to keep building the future.</p><br>
 <br>
-		<p><b>Want to know more about us?</b> Visit <a href="about.html">About Us.</a></p>
+		<p><b>Want to know more about us?</b> Visit <a href="about.php">About Us.</a></p>
 	</main>
 
 	<?php

@@ -90,7 +90,7 @@
 			<li>Flexible hybrid working arrangements and career development pathways</li>
 		</ul>
 
-		<form action="../apply.html">
+		<form action="../apply.php">
 		    <button type="submit">Apply Now</button>
 		</form>
 
