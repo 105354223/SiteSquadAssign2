@@ -22,26 +22,7 @@
 <body>
 	<?php
     include 'Inc_Files/header.inc';
-
-	require_once 'settings.php';
-
-	// Create database connection
-	$conn = mysqli_connect($host, $user, $password, $sql_db);
-
-	// Check connection
-	if (!$conn) {
-		die("Connection failed: " . mysqli_connect_error());
-	}
-
-	// Fetch all jobs from database
-	$query = "SELECT * FROM jobs ORDER BY posted_date DESC";
-	$result = mysqli_query($conn, $query);
-
-	if (!$result) {
-		die("Error: Unable to fetch jobs from database");
-	}
-	?>
-	
+    ?>
 	<main class="content">
 		<h1>Explore our Available Positions</h1>
 		<p style="text-align: center;">
@@ -50,28 +31,29 @@
 			and technology roles designed to drive innovation, strengthen security, and deliver smarter solutions <br>
 			across government.
 		</p>
-		
-		<!-- Dynamic Jobs Grid -->
+		<!--these are the picture for the icons and link to the individual job description.-->
 		<div class="careersGrid">
-			<?php if (mysqli_num_rows($result) > 0): ?>
-				<?php while ($job = mysqli_fetch_assoc($result)): ?>
-					<div class="careerItem">
-						<img src="images/<?php echo strtolower(str_replace(' ', '_', $job['job_title'])); ?>.jpg" 
-							 alt="<?php echo htmlspecialchars($job['job_title']); ?>" width="200" height="120">
-						<a href="Pages/<?php echo strtolower(str_replace(' ', '_', $job['job_title'])); ?>.php">
-							<?php echo htmlspecialchars($job['job_title']); ?>
-						</a>
-						<p><strong>Ref:</strong> <?php echo htmlspecialchars($job['job_reference']); ?></p>
-						<p><strong>Salary:</strong> <?php echo htmlspecialchars($job['salary_range']); ?></p>
-					</div>
-				<?php endwhile; ?>
-			<?php else: ?>
-				<div class="careerItem">
-					<p>No job positions available at the moment. Please check back later.</p>
-				</div>
-			<?php endif; ?>
+			<div class="careerItem">
+				<img src="images/Software_developer.jpg" alt="Software Developer" width="200" height="120">
+				<a href="Pages/software.php">Software Developer</a>
+			</div>
+			<div class="careerItem">
+				<img src="images/It_security.jpg" alt="IT security Analyst" width="200" height="120">
+				<a href="Pages/security.php">IT Security Analyst</a>
+			</div>
+			<div class="careerItem">
+				<img src="images/Systems_administrator.jpg" alt="Systems Administrator" width="200" height="120">
+				<a href="#">Systems Administrator</a>
+			</div>
+			<div class="careerItem">
+				<img src="images/Data_analyst.jpg" alt="Data Analyst" width="200" height="120">
+				<a href="#">Data Analyst</a>
+			</div>
+			<div class="careerItem">
+				<img src="images/Project_manager.jpg" alt="Project manager" width="200" height="120">
+				<a href="#">Project Manager</a>
+			</div>
 		</div>
-
 		<!-- inline CSS -->
 		<aside style="background-color: lightblue">
 			<h3>Application Information</h3>
@@ -84,7 +66,6 @@
 				For assistance, contact us at <a href="mailto:info@sitesquad.gov">info@sitesquad.gov</a>.
 			</p>
 		</aside>
-		
 		<h2><u><b>Working With Us</b></u></h2>
 		<p>Our agency is dedicated to strengthening Australia's digital future by delivering secure, reliable,and
 			citizen-focused services. We are seeking skilled professionals to help modernise IT systems, protect,
@@ -101,20 +82,18 @@
 
 		<h2><b><u>Career Growth Pathways</u></b></h2>
 		<p>Whether you are starting as a graduate or joining as an experienced professional, we provide clear pathways for advancement. From entry-level IT roles to leadership opportunities, SiteSquad is committed to helping you achieve your career goals.</p>
-		 
+         
 		<img src="images/Jobpage.png" width="250" height="150" alt="Job page image"> 
 		
-		<h2><b><u>Did You Know?</u></b></h2>
-		<p><b>➡️ A few surprising facts about our team and the work we do.</b></p>
-		<p>At SiteSquad, we take pride in the impact of our work but we also enjoy celebrating the lighter side of our journey. Did you know our team has written over 500,000 lines of code to power secure government services and protect more than 10 million citizen records every year? With a workforce representing 15+ cultural backgrounds, we thrive on diversity and fresh ideas, delivering projects at remarkable speed our fastest launch went live in just three weeks. Every day, our analysts process over 1TB of data, helping shape smarter, evidence based decisions, and our commitment to excellence has earned us recognition as a Top Digital Services Innovator for three consecutive years. And while innovation drives us forward, coffee certainly fuels us too — with over 1,200 cups consumed each month, our teams are always energised to keep building the future.</p>
-		<br>
-		<br>
+	<h2><b><u>Did You Know?</u></b></h2>
+	<p><b>➡️ A few surprising facts about our team and the work we do.</b></p>
+<p>At SiteSquad, we take pride in the impact of our work but we also enjoy celebrating the lighter side of our journey. Did you know our team has written over 500,000 lines of code to power secure government services and protect more than 10 million citizen records every year? With a workforce representing 15+ cultural backgrounds, we thrive on diversity and fresh ideas, delivering projects at remarkable speed our fastest launch went live in just three weeks. Every day, our analysts process over 1TB of data, helping shape smarter, evidence based decisions, and our commitment to excellence has earned us recognition as a Top Digital Services Innovator for three consecutive years. And while innovation drives us forward, coffee certainly fuels us too — with over 1,200 cups consumed each month, our teams are always energised to keep building the future.</p><br>
+<br>
 		<p><b>Want to know more about us?</b> Visit <a href="about.php">About Us.</a></p>
 	</main>
 
 	<?php
     include 'Inc_Files/footer.inc';
-	mysqli_close($conn);
-	?>
+    ?>
 </body>
 </html>
