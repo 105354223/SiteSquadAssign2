@@ -150,14 +150,12 @@
 			<h2 class="section-title">Available Positions</h2>
 			
 			<?php
-// Database connection
 require_once("settings.php");
 $conn = @mysqli_connect($host, $user, $password, $sql_db);
 
 if (!$conn) {
     echo "<div class='no-jobs'><p>Unable to connect to the database. Please try again later.</p></div>";
 } else {
-    // Create Jobs table if it doesn't exist (empty table)
     $createJobsTable = "CREATE TABLE IF NOT EXISTS Jobs (
         job_reference VARCHAR(10) PRIMARY KEY, 
         job_title VARCHAR(50) NOT NULL,
@@ -171,7 +169,6 @@ if (!$conn) {
     )";
 
     if ($conn->query($createJobsTable)) {
-        // Fetch ALL jobs from the database
         $query = "SELECT job_reference, job_title, salary_range, description, requirements, location, work_type, closing_date 
                   FROM Jobs 
                   ORDER BY closing_date ASC";
@@ -181,7 +178,6 @@ if (!$conn) {
             echo "<div class='jobs-grid'>";
             
             while ($row = mysqli_fetch_assoc($result)) {
-                // Map job titles to image files
                 $imageMap = [
                     'Software Developer' => 'Software_developer.jpg',
                     'IT Security Analyst' => 'It_security.jpg',
@@ -193,7 +189,6 @@ if (!$conn) {
                 $imageFile = $imageMap[$row['job_title']] ?? 'default_job.jpg';
                 $imagePath = "images/{$imageFile}";
                 
-                // Check if job is still open
                 $isExpired = (strtotime($row['closing_date']) < time());
                 $statusClass = $isExpired ? 'job-expired' : 'job-closing';
                 $statusText = $isExpired ? 'Closed: ' . $row['closing_date'] : 'Closes: ' . $row['closing_date'];
@@ -219,7 +214,7 @@ if (!$conn) {
                 echo "</div>";
             }
             
-            echo "</div>"; // Close jobs-grid
+            echo "</div>";
         } else {
             echo "<div class='no-jobs'>";
             echo "<h3>No Current Openings</h3>";
