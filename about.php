@@ -30,7 +30,7 @@
         </section>
 
     <section>
-        <h2>Member contributions and quotes</h2>
+        <h2>Member contributions</h2>
 
         <?php
         require_once("settings.php");
